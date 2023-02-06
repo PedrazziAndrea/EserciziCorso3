@@ -1,0 +1,93 @@
+##################################################################
+#                                                                #
+#                    ESERCIZI 2-6-2023                           #
+#                                                                #
+################################################################## 
+
+
+
+import math #importo un modulo
+
+#
+#   Funzione di controllo per vedere
+#   se gli input sono dei numeri
+#
+
+def Controllo(a, b): 
+   
+    if(a.isnumeric() == True and b.isnumeric() == True):
+        return 1
+    else: 
+        return 0
+
+#
+#   Funzione per calcolare perimetro
+#   di un quadrato partendo dal lato
+#
+
+def Aquadrato():
+         while True:
+            lato = input ("Lunghezza lato: ")
+            if(Controllo(lato, "0")==1):
+                lato = int(lato)
+                print ("Il suo perimetro è di " + str(lato*4))
+                return
+            else:
+               print("Inserici dei caratteri corretti.")
+
+#
+#   Funzione per calcolare perimetro
+#   del cerchio partendo dal raggio
+#    
+
+def Acerchio():
+        while True:
+            raggio = input ("Lunghezza raggio")
+            if(Controllo(lato, "0")==1):
+                base = int(lato)
+                print ("Il suo perimetro è di " + str((lato*2) * math.pi))#invoco una costante del modulo
+                return
+            else:
+               print("Inserici dei caratteri corretti.")
+
+#
+#   Funzione per calcolare perimetro
+#   del rettangolo partendo da base e altezza
+#    
+
+def Arettangolo():
+          while True:
+            base = input ("Lunghezza base: ")
+            altezza = input ("Lunghezza altezza: ")
+            if(Controllo(base,altezza)==1):
+                base = int(base)
+                altezza = int(altezza)
+                print ("Il suo perimetro è di " + str((base*2) * (altezza*2)))
+                return
+                
+            else:
+               print("Inserici dei caratteri corretti.") 
+           
+    
+print("Scegli cosa vuoi calcolare: \n(A)-Perimetro Quadrato\n(B)-Perimetro Cerchio\n(C)-Perimetro Rettangolo")
+
+#
+#   Funzione per creare un ciclo
+#   infinito invocando le funzioni
+#    
+
+auxC = 0
+while auxC == 0:
+    risposta = input ("La tua scelta: ")
+    auxC = 0 
+    if risposta == "A":
+         Aquadrato()
+    elif risposta == "B": 
+         Acerchio()
+    elif risposta == "C":
+         Arettangolo()
+    else:
+        print("Inserisci un carattere valido.")
+        auxC += 1
+        continue
+        
