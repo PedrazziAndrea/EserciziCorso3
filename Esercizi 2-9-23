@@ -1,0 +1,41 @@
+SCAN TCP WELL-KNOWN PORTS
+Questo tipo di scan è più preciso,consentendoci di ottenere
+una maggiore quantità di dati sulle porte,
+ma meno efficente e più rilevabile
+rispetto alla variante syn. 
+
+FONTE SCAN : Kali 192.168.50.100
+
+TARGET SCAN : Metasploitable2 192.168.50.101
+
+SCAN PORTE TCP 0-1023: 12 servizi attivi
+
+
+
+
+
+SYN SCAN TCP WELL-KNOWN PORTS
+Questa variante del tcp scan è molto sicura veloce e poco invasiva
+dato che lo scan non completa il thre hand handshake per ogni richiesta
+
+FONTE SCAN : Kali 192.168.50.100
+
+TARGET SCAN : Metasploitable2 192.168.50.101
+
+SCAN PORTE TCP 0-1023: 12 servizi attivi
+
+
+
+
+
+SCAN SWITCH -A
+Applicando lo switch -A alla fine della riga di comando possiamo 
+effettuare una scansione che ci darà come risultato
+la lista delle porte aperte con una grande quantità
+di dati a riguardo a discapito delle prestazioni
+
+FONTE SCAN : Kali 192.168.50.100
+
+TARGET SCAN : Metasploitable2 192.168.50.101
+
+SCAN PORTE TCP 0-1023: 12 servizi attivi
